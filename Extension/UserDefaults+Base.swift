@@ -1,9 +1,3 @@
-//
-//  UserDefaults+Base.swift
-//  FJG
-//
-//  Created by yo_higashihara on 2020/10/25.
-//
 
 import Foundation
 
