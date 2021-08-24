@@ -48,9 +48,9 @@ extension MockUserDefaults: KeyValueStore {
     }
 
     @discardableResult
-    func int(forKey key: UserDefaultKeys) -> Int? {
+    func int(forKey key: UserDefaultKeys) -> Int {
         let key = namespaced(key)
-        return mockDictionary[key] as? Int
+        return (mockDictionary[key] as? Int) ?? 0
     }
 
     @discardableResult

@@ -23,7 +23,7 @@ protocol KeyValueStore: KeyNameSpaceable {
     func string(forKey key: UserDefaultKeys) -> String?
 
     @discardableResult
-    func int(forKey key: UserDefaultKeys) -> Int?
+    func int(forKey key: UserDefaultKeys) -> Int
 
     @discardableResult
     func array(forKey key: UserDefaultKeys) -> [Any]?
@@ -72,7 +72,7 @@ extension UserDefaults: KeyValueStore {
     }
 
     @discardableResult
-    func int(forKey key: UserDefaultKeys) -> Int? {
+    func int(forKey key: UserDefaultKeys) -> Int {
         let key = namespaced(key)
         return self.integer(forKey: key)
     }
